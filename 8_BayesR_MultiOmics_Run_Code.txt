@@ -1,0 +1,211 @@
+# Using EWAS phenotypes
+## Run1 - G  
+screen -S g.1
+export LD_LIBRARY_PATH=/opt/gcc/lib64
+cd Cog_Combined_BayesR/Chains/g/Chain1
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run1/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/G_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 1 
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run1/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/G_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001" --mcmc-samples Cog_Combined_BayesR/Chains/g/Chain1/g_output_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 1 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+screen -S g.2
+cd Cog_Combined_BayesR/Chains/g/Chain2
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run2/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/G_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 2
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run2/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/G_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001"  --mcmc-samples Cog_Combined_BayesR/Chains/g/Chain2/g_output_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 2 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+screen -S g.3
+cd Cog_Combined_BayesR/Chains/g/Chain3
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run3/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/G_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 3
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run3/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/G_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001"  --mcmc-samples Cog_Combined_BayesR/Chains/g/Chain3/g_output_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 3 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+screen -S g.4
+cd Cog_Combined_BayesR/Chains/g/Chain4
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run4/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/G_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 4
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run4/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/G_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001"  --mcmc-samples Cog_Combined_BayesR/Chains/g/Chain4/g_output_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 4 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+
+
+
+## Run2 - Gf  
+screen -S gf.1
+export LD_LIBRARY_PATH=/opt/gcc/lib64
+cd Cog_Combined_BayesR/Chains/gf/Chain1
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run1/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/GF_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 1 
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run1/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/GF_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001" --mcmc-samples Cog_Combined_BayesR/Chains/gf/Chain1/gf_output_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 1 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+screen -S gf.2
+cd Cog_Combined_BayesR/Chains/gf/Chain2
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run2/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/GF_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 2
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run2/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/GF_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001"  --mcmc-samples Cog_Combined_BayesR/Chains/gf/Chain2/gf_output_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 2 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+screen -S gf.3
+cd Cog_Combined_BayesR/Chains/gf/Chain3
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run3/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/GF_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 3
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run3/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/GF_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001"  --mcmc-samples Cog_Combined_BayesR/Chains/gf/Chain3/gf_output_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 3 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+screen -S gf.4
+cd Cog_Combined_BayesR/Chains/gf/Chain4
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run4/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/GF_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 4
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run4/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/GF_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001"  --mcmc-samples Cog_Combined_BayesR/Chains/gf/Chain4/gf_output_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 4 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+
+## Run3 - LM  
+screen -S lm.1
+export LD_LIBRARY_PATH=/opt/gcc/lib64
+cd Cog_Combined_BayesR/Chains/lm/Chain1
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run1/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/LM_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 1 
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run1/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/LM_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001" --mcmc-samples Cog_Combined_BayesR/Chains/lm/Chain1/lm_output_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 1 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+screen -S lm.2
+cd Cog_Combined_BayesR/Chains/lm/Chain2
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run2/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/LM_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 2
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run2/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/LM_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001"  --mcmc-samples Cog_Combined_BayesR/Chains/lm/Chain2/lm_output_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 2 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+screen -S lm.3
+cd Cog_Combined_BayesR/Chains/lm/Chain3
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run3/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/LM_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 3
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run3/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/LM_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001"  --mcmc-samples Cog_Combined_BayesR/Chains/lm/Chain3/lm_output_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 3 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+screen -S lm.4
+cd Cog_Combined_BayesR/Chains/lm/Chain4
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run4/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/LM_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 4
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run4/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/LM_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001"  --mcmc-samples Cog_Combined_BayesR/Chains/lm/Chain4/lm_output_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 4 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+
+## Run4 - DigitSym 
+screen -S digsym.1
+export LD_LIBRARY_PATH=/opt/gcc/lib64
+cd Cog_Combined_BayesR/Chains/digitsym/Chain1
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run1/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Digit_Symbol_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 1 
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run1/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Digit_Symbol_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001" --mcmc-samples Cog_Combined_BayesR/Chains/digitsym/Chain1/digit_output_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 1 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+screen -S digsym.2
+cd Cog_Combined_BayesR/Chains/digitsym/Chain2
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run2/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Digit_Symbol_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 2
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run2/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Digit_Symbol_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001"  --mcmc-samples Cog_Combined_BayesR/Chains/digitsym/Chain2/digit_output_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 2 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+screen -S digsym.3
+cd Cog_Combined_BayesR/Chains/digitsym/Chain3
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run3/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Digit_Symbol_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 3
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run3/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Digit_Symbol_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001"  --mcmc-samples Cog_Combined_BayesR/Chains/digitsym/Chain3/digit_output_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 3 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+screen -S digsym.4
+cd Cog_Combined_BayesR/Chains/digitsym/Chain4
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run4/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Digit_Symbol_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 4
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run4/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Digit_Symbol_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001"  --mcmc-samples Cog_Combined_BayesR/Chains/digitsym/Chain4/digit_output_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 4 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+## Run5 - Verbal 
+screen -S verbal.1
+export LD_LIBRARY_PATH=/opt/gcc/lib64
+cd Cog_Combined_BayesR/Chains/verbal/Chain1
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run1/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Verbal_Total_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 1 
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run1/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Verbal_Total_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001" --mcmc-samples Cog_Combined_BayesR/Chains/verbal/Chain1/verbal_output_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 1 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+screen -S verbal.2
+cd Cog_Combined_BayesR/Chains/verbal/Chain2
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run2/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Verbal_Total_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 2
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run2/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Verbal_Total_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001"  --mcmc-samples Cog_Combined_BayesR/Chains/verbal/Chain2/verbal_output_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 2 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+screen -S verbal.3
+cd Cog_Combined_BayesR/Chains/verbal/Chain3
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run3/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Verbal_Total_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 3
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run3/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Verbal_Total_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001"  --mcmc-samples Cog_Combined_BayesR/Chains/verbal/Chain3/verbal_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 3 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+screen -S verbal.4
+cd Cog_Combined_BayesR/Chains/verbal/Chain4
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run4/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Verbal_Total_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 4
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run4/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Verbal_Total_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001"  --mcmc-samples Cog_Combined_BayesR/Chains/verbal/Chain4/verbal_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 4 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+## Run5 - Vocab 
+screen -S vocab.1
+export LD_LIBRARY_PATH=/opt/gcc/lib64
+cd Cog_Combined_BayesR/Chains/vocab/Chain1
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run1/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Vocabulary_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 1 
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run1/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Vocabulary_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001" --mcmc-samples Cog_Combined_BayesR/Chains/vocab/Chain1/vocab_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 1 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+screen -S vocab.2
+cd Cog_Combined_BayesR/Chains/vocab/Chain2
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run2/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Vocabulary_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 2
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run2/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Vocabulary_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001"  --mcmc-samples Cog_Combined_BayesR/Chains/vocab/Chain2/vocab_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 2 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+screen -S vocab.3
+cd Cog_Combined_BayesR/Chains/vocab/Chain3
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run3/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Vocabulary_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 3
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run3/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Vocabulary_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001"  --mcmc-samples Cog_Combined_BayesR/Chains/vocab/Chain3/vocab_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 3 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+screen -S vocab.4
+cd Cog_Combined_BayesR/Chains/vocab/Chain4
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run4/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Vocabulary_10k.csvphen --analysis-type preprocess --thread 12 --thread-spawned 12 --marker-cache --seed 4
+../Marioni_Group/BayesRRcmd/src/brr --data-file Cog_Combined_BayesR/Cog_Inputs/Run4/DNAm_GWAS_9162.csv --pheno Cog_Combined_BayesR/Cog_Inputs/Vocabulary_10k.csvphen --analysis-type ppbayes --chain-length 10000 --burn-in 5000 --thin 5 --S "0.01, 0.001, 0.0001; 0.001, 0.0001, 0.00001"  --mcmc-samples Cog_Combined_BayesR/Chains/vocab/Chain4/vocab_10k.csv --thread 12 --thread-spawned 12 --marker-cache --seed 3 --group Cog_Combined_BayesR/Cog_Inputs/group_file.txt
+
+
+		
+## Extract results 
+# mkdir Cog_Combined_BayesR/Cog_Sigma
+# mkdir Cog_Combined_BayesR/Cog_Beta
+# mkdir Cog_Combined_BayesR/Cog_Comp
+
+	cd Cog_Combined_BayesR/Chains
+
+	for chain in {1..4}
+
+	do
+
+	for i in ./*/Chain${chain}/*.csv
+
+	do
+	 
+	sigma1=$(head -1 $i | sed 's/,/\n/g' | cat -n | grep -n "sigma" | cut -f 1 |  sed 's/:/\n/g' | awk 'NR==1') 
+	sigma2=$(head -1 $i | sed 's/,/\n/g' | cat -n | grep -n "sigma" | cut -f 1 |  sed 's/:/\n/g' | awk 'END{print $NF}') 
+
+	A=$( echo $i | cut -d"/" -f2)
+	B=$( echo $A | cut -d_ -f1)
+
+	cat $i | cut -d ',' -f $sigma1-$sigma2 > ../Cog_Sigma/${B}_10k_Chain${chain}.csv
+
+
+	beta1=$(head -1 $i | sed 's/,/\n/g' | cat -n | grep -n "beta" | cut -f 1 | sed 's/:/\n/g' | awk 'NR==1')
+	beta2=$(head -1 $i | sed 's/,/\n/g' | cat -n | grep -n "beta" | cut -f 1 | sed 's/:/\n/g' | awk 'END{print $NF}')
+
+	A=$( echo $i | cut -d"/" -f2)
+	B=$( echo $A | cut -d_ -f1)
+
+	cat $i | cut -d ',' -f $beta1-$beta2 > ../Cog_Beta/${B}_10k_Chain${chain}.csv
+
+
+	comp1=$(head -1 $i | sed 's/,/\n/g' | cat -n | grep -n "comp" | cut -f 1 | sed 's/:/\n/g' | awk 'NR==1')
+	comp2=$(head -1 $i | sed 's/,/\n/g' | cat -n | grep -n "comp" | cut -f 1 | sed 's/:/\n/g' | awk 'END{print $NF}')
+
+	A=$( echo $i | cut -d"/" -f2)
+	B=$( echo $A | cut -d_ -f1)
+
+	cat $i | cut -d ',' -f $comp1-$comp2 > ../Cog_Comp/${B}_10k_Chain${chain}.csv
+
+	done 
+
+	done
+
+
+
+
+
